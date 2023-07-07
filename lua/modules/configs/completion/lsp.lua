@@ -138,7 +138,13 @@ return function()
 		end
 	end
 
-	mason_lspconfig.setup_handlers({ mason_lsp_handler })
+    mason_lspconfig.setup_handlers({ mason_lsp_handler })
+
+    local exit_code = os.execute("test -x " .. "/usr/bin/clangd")
+    
+    if exit_code == 0 then
+        mason_lsp_handler('clangd')
+    end
 
 	-- Setup lsps that are not supported by `mason.nvim` but supported by `nvim-lspconfig` here.
 	if vim.fn.executable("dart") == 1 then

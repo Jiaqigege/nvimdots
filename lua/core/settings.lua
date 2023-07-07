@@ -2,7 +2,7 @@ local settings = {}
 
 -- Set it to false if you want to use https to update plugins and treesitter parsers.
 ---@type boolean
-settings["use_ssh"] = true
+settings["use_ssh"] = false
 
 -- Set it to false if there are no need to format on save.
 ---@type boolean
@@ -81,13 +81,13 @@ settings["server_formatting_block_list"] = {
 -- check the below link for all the supported LSPs:
 -- https://github.com/neovim/nvim-lspconfig/tree/master/lua/lspconfig/server_configurations
 ---@type string[]
+---- dont add clangd in this list.
 settings["lsp_deps"] = {
-	"bashls",
-	"clangd",
-	"html",
-	"jsonls",
-	"lua_ls",
-	"pylsp",
+	---- "bashls",
+	---- "html",
+	---- "jsonls",
+	---- "lua_ls",
+	---- "pylsp",
 	-- "gopls",
 }
 
@@ -97,11 +97,12 @@ settings["lsp_deps"] = {
 -- https://github.com/jose-elias-alvarez/null-ls.nvim/tree/main/lua/null-ls/builtins
 ---@type string[]
 settings["null_ls_deps"] = {
-	"clang_format",
-	"prettier",
-	"shfmt",
-	"stylua",
-	"vint",
+	---- "clang_format",
+	---- "prettier",
+	---- "rustfmt",
+	---- "shfmt",
+	---- "stylua",
+	---- "vint",
 }
 
 -- Set the Debug Adapter Protocol (DAP) clients that will be installed and configured during bootstrap here.
@@ -110,8 +111,8 @@ settings["null_ls_deps"] = {
 ---@type string[]
 settings["dap_deps"] = {
 	"codelldb", -- C-Family
-	"delve", -- Go
-	"python", -- Python (debugpy)
+	--"delve", -- Go
+	--"python", -- Python (debugpy)
 }
 
 return settings

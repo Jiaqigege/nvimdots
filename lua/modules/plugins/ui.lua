@@ -5,6 +5,7 @@ ui["goolord/alpha-nvim"] = {
 	event = "BufWinEnter",
 	config = require("ui.alpha"),
 }
+
 ui["akinsho/bufferline.nvim"] = {
 	lazy = true,
 	event = { "BufReadPost", "BufAdd", "BufNewFile" },
@@ -31,11 +32,11 @@ ui["lewis6991/gitsigns.nvim"] = {
 	event = { "CursorHold", "CursorHoldI" },
 	config = require("ui.gitsigns"),
 }
-ui["lukas-reineke/indent-blankline.nvim"] = {
-	lazy = true,
-	event = "BufReadPost",
-	config = require("ui.indent-blankline"),
-}
+---- ui["lukas-reineke/indent-blankline.nvim"] = {
+---- 	lazy = true,
+---- 	event = "BufReadPost",
+---- 	config = require("ui.indent-blankline"),
+---- }
 ui["nvim-lualine/lualine.nvim"] = {
 	lazy = true,
 	event = { "BufReadPost", "BufAdd", "BufNewFile" },
@@ -46,30 +47,30 @@ ui["zbirenbaum/neodim"] = {
 	event = "LspAttach",
 	config = require("ui.neodim"),
 }
-ui["karb94/neoscroll.nvim"] = {
-	lazy = true,
-	event = "BufReadPost",
-	config = require("ui.neoscroll"),
-}
+---- ui["karb94/neoscroll.nvim"] = {
+---- 	lazy = true,
+---- 	event = "BufReadPost",
+---- 	config = require("ui.neoscroll"),
+---- }
 ui["shaunsingh/nord.nvim"] = {
 	lazy = true,
 	config = require("ui.nord"),
 }
-ui["rcarriga/nvim-notify"] = {
-	lazy = true,
-	event = "VeryLazy",
-	config = require("ui.notify"),
-}
-ui["folke/paint.nvim"] = {
-	lazy = true,
-	event = { "CursorHold", "CursorHoldI" },
-	config = require("ui.paint"),
-}
-ui["dstein64/nvim-scrollview"] = {
-	lazy = true,
-	event = "BufReadPost",
-	config = require("ui.scrollview"),
-}
+---- ui["rcarriga/nvim-notify"] = {
+---- 	lazy = true,
+---- 	event = "VeryLazy",
+---- 	config = require("ui.notify"),
+---- }
+---- ui["folke/paint.nvim"] = {
+---- 	lazy = true,
+---- 	event = { "CursorHold", "CursorHoldI" },
+---- 	config = require("ui.paint"),
+---- }
+---- ui["dstein64/nvim-scrollview"] = {
+---- 	lazy = true,
+---- 	event = "BufReadPost",
+---- 	config = require("ui.scrollview"),
+---- }
 ui["edluffy/specs.nvim"] = {
 	lazy = true,
 	event = "CursorMoved",
