@@ -2,7 +2,7 @@ local settings = {}
 
 -- Set it to false if you want to use https to update plugins and treesitter parsers.
 ---@type boolean
-settings["use_ssh"] = true
+settings["use_ssh"] = false
 
 -- Set it to false if there are no need to format on save.
 ---@type boolean
@@ -70,15 +70,15 @@ settings["external_browser"] = "chrome-cli open"
 -- Filetypes in this list will skip lsp formatting if rhs is true.
 ---@type table<string, boolean>
 settings["formatter_block_list"] = {
-	lua = false, -- example
+    lua = false, -- example
 }
 
 -- Servers in this list will skip setting formatting capabilities if rhs is true.
 ---@type table<string, boolean>
 settings["server_formatting_block_list"] = {
-	lua_ls = true,
-	tsserver = true,
-	clangd = true,
+	--lua_ls = true,
+	--tsserver = true,
+	--clangd = true,
 }
 
 -- Set the language servers that will be installed during bootstrap here.
@@ -86,13 +86,8 @@ settings["server_formatting_block_list"] = {
 -- https://github.com/neovim/nvim-lspconfig/tree/master/lua/lspconfig/server_configurations
 ---@type string[]
 settings["lsp_deps"] = {
-	"bashls",
-	"clangd",
-	"html",
-	"jsonls",
-	"lua_ls",
-	"pylsp",
-	-- "gopls",
+	--"bashls",
+	--"lua_ls",
 }
 
 -- Set the general-purpose servers that will be installed during bootstrap here.
@@ -101,11 +96,7 @@ settings["lsp_deps"] = {
 -- https://github.com/jose-elias-alvarez/null-ls.nvim/tree/main/lua/null-ls/builtins
 ---@type string[]
 settings["null_ls_deps"] = {
-	"clang_format",
-	"prettier",
-	"shfmt",
-	"stylua",
-	"vint",
+    --"clang-format",
 }
 
 -- Set the Debug Adapter Protocol (DAP) clients that will be installed and configured during bootstrap here.
@@ -113,9 +104,7 @@ settings["null_ls_deps"] = {
 -- https://github.com/jay-babu/mason-nvim-dap.nvim/blob/main/lua/mason-nvim-dap/mappings/source.lua
 ---@type string[]
 settings["dap_deps"] = {
-	"codelldb", -- C-Family
-	"delve", -- Go
-	"python", -- Python (debugpy)
+	--"codelldb", -- C-Family
 }
 
 return settings

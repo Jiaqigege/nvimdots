@@ -55,11 +55,11 @@ ui["shaunsingh/nord.nvim"] = {
 	lazy = true,
 	config = require("ui.nord"),
 }
-ui["rcarriga/nvim-notify"] = {
-	lazy = true,
-	event = "VeryLazy",
-	config = require("ui.notify"),
-}
+--ui["rcarriga/nvim-notify"] = {
+--	lazy = true,
+--	event = "VeryLazy",
+--	config = require("ui.notify"),
+--}
 ui["folke/paint.nvim"] = {
 	lazy = true,
 	event = { "CursorHold", "CursorHoldI" },
