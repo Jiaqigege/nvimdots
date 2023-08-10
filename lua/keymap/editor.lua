@@ -6,10 +6,10 @@ local map_callback = bind.map_callback
 local et = bind.escape_termcode
 
 local plug_map = {
-    ["n|H"] = map_cmd("^"):with_noremap():with_silent(),
-    ["n|L"] = map_cmd("$"):with_noremap():with_silent(),
-    ["n|^"] = map_cmd("H"):with_noremap():with_silent(),
-    ["n|$"] = map_cmd("L"):with_noremap():with_silent(),
+    ["nv|H"] = map_cmd("^"):with_noremap():with_silent(),
+    ["nv|L"] = map_cmd("$"):with_noremap():with_silent(),
+    ["nv|^"] = map_cmd("H"):with_noremap():with_silent(),
+    ["nv|$"] = map_cmd("L"):with_noremap():with_silent(),
 	-- Plugin: accelerate-jk
 	["n|j"] = map_callback(function()
 		return et("<Plug>(accelerated_jk_gj)")
